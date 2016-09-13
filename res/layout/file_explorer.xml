@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#23262b" >
+    
+    <LinearLayout 
+        android:id="@+id/explorer_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+        
+        <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#ffffff"
+	        android:text="请选择需要传输的文件："
+	        android:padding="10dp"
+	        android:textSize="20sp"/>
+        
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/theme_color"/>
+        
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/explorer_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true">
+        
+        <CheckBox
+		    android:id="@+id/explorer_network"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerVertical="true"
+		    android:textSize="15sp"
+            android:textColor="#ffffff"
+		    android:text="上传至服务器"/> 
+        
+        <Button 
+            android:id="@+id/explorer_select"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:textSize="15sp"
+            android:textColor="@color/theme_color"
+            android:drawableLeft="@drawable/confirm_32"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="确认"
+            android:background="#00000000"/>
+        
+        <Button 
+            android:id="@+id/explorer_cancel"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:textSize="15sp"
+            android:textColor="#ff3972"
+            android:drawableLeft="@drawable/cancel_32"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/explorer_select"
+            android:text="取消"
+            android:background="#00000000"/>
+        
+    </RelativeLayout>
+
+    <ListView 
+        android:id="@+id/explorer_list"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/explorer_title"
+        android:layout_above="@id/explorer_button"/>
+    
+</RelativeLayout>

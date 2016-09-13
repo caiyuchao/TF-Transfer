@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout 
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_color"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+        
+        <Button 
+            android:id="@+id/main_setting"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/setting"
+            android:layout_centerVertical="true"/>
+        
+        <Button 
+            android:id="@+id/main_transfer"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/transfer"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+        
+        <AutoCompleteTextView 
+            android:id="@+id/main_search"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/main_setting"
+            android:layout_toLeftOf="@id/main_transfer"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="快速查找文件"/>
+        
+    </RelativeLayout>
+    
+    <Button 
+        android:id="@+id/main_transfer_list"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="传输列表"
+        android:background="@drawable/corners_bg_button"
+        android:layout_marginLeft="30dp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+     	android:layout_marginBottom="5dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"/>
+    
+    <LinearLayout 
+        android:id="@+id/main_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/main_title">
+        
+        <Button
+            android:id="@+id/main_photo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:textColor="@color/theme_color"
+            android:textSize="15sp"
+            android:text="图片"
+            android:background="#ffffff"/>
+        
+        <Button
+            android:id="@+id/main_doc"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:textColor="#9f9f9f"
+            android:textSize="15sp"
+            android:text="文档"
+            android:background="#ffffff"/>
+        
+        <Button
+            android:id="@+id/main_vedio"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:textColor="#9f9f9f"
+            android:textSize="15sp"
+            android:text="视频"
+            android:background="#ffffff"/>
+        
+        <Button
+            android:id="@+id/main_music"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:textColor="#9f9f9f"
+            android:textSize="15sp"
+            android:text="音乐"
+            android:background="#ffffff"/>
+        
+        <Button
+            android:id="@+id/main_other"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:textColor="#9f9f9f"
+            android:textSize="15sp"
+            android:text="其他"
+            android:background="#ffffff"/>
+        
+    </LinearLayout>
+    
+    <com.example.transfer.ui.swipemenulistview.SwipeMenuListView 
+        android:id="@+id/main_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_button"
+        android:layout_above="@id/main_transfer_list"
+        android:dividerHeight="0.1dp"
+        android:divider="#cbcaca"
+        android:layout_marginBottom="5dp"/>
+
+</RelativeLayout>

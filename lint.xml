@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ResourceAsColor">
+        <ignore path="src/com/example/transfer/fragment/TransferListFragment.java" />
+    </issue>
+    <issue id="SimpleDateFormat" severity="ignore" />
+</lint>

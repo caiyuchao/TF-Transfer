@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        
+        <Button 
+            android:id="@+id/send_qrcode"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:background="@drawable/corners_bg_button_left"
+            android:textColor="#ffffff"
+            android:text="二维码发送"/>
+        
+        <Button 
+            android:id="@+id/send_voice"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:background="@drawable/corners_bg_button_right_no"
+            android:textColor="@color/theme_color"
+            android:text="声波发送"/>
+        
+    </LinearLayout>
+
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:id="@+id/send_file_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="ID:"/>
+        
+        <RelativeLayout 
+            android:id="@+id/send_file_qrcode"
+	        android:layout_width="300dp"
+	        android:layout_height="300dp"
+	        android:layout_centerInParent="true">
+	        
+        </RelativeLayout>
+
+	    <TextView
+	        android:id="@+id/send_file_title"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="20dp"
+	        android:textColor="#000000"
+	        android:gravity="center"
+	        android:text="扫描该二维码接收文件" />
+	    
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="20dp"
+	        android:gravity="center">
+	        
+	        <Button 
+	            android:id="@+id/send_file_min"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@color/theme_color"
+	            android:textSize="20sp"
+	            android:padding="10dp"
+	            android:textColor="#ffffff"
+	            android:text="最小化"/>
+	        
+	        <Button 
+	            android:id="@+id/send_file_cancel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@color/theme_color"
+	            android:layout_marginLeft="20dp"
+	            android:textSize="20sp"
+	            android:textColor="#ffffff"
+	            android:padding="10dp"
+	            android:text="结束传输"/>
+	        
+	    </LinearLayout>
+        
+    </LinearLayout>
+    
+</RelativeLayout>

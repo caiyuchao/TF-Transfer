@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/theme_color">
+        
+        <Button 
+            android:id="@+id/setting_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="4dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_32"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"/>
+        
+        <Button 
+            android:id="@+id/setting_confirm"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="完成"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="4dp"
+            android:textColor="#ffffff"
+            android:textSize="15sp"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名："
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/theme_color"/>
+        
+        <EditText 
+	        android:id="@+id/setting_name"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:textColor="#000000"
+	        android:inputType="textPersonName"
+	        android:layout_marginLeft="70dp"
+	        android:layout_marginRight="10dp"
+	        android:digits="@string/edittext_content"
+	        android:background="@null"/>
+    
+	    <View
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_alignParentBottom="true"
+	        android:background="@color/theme_color"/>
+        
+    </RelativeLayout>
+    
+</LinearLayout>

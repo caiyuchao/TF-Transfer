@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="@color/theme_color">
+    
+    <Button 
+        android:id="@+id/revice_scan"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:drawableTop="@drawable/scan_64"
+        android:background="@android:color/transparent"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:text="扫描"/>
+    
+    <Button 
+        android:id="@+id/revice_voice"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:drawableTop="@drawable/voice_64"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="30dp"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:text="声波"/>
+    
+</LinearLayout>

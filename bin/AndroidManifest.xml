@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tf.transfer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_tf"
+        android:label="@string/app_name">
+        <activity
+            android:name="com.example.transfer.MainActivity"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name="com.example.transfer.ui.VoiceActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.hauxin.zxing_demo.QRCodeScanActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.hauxin.zxing_demo.QRCodeGenerateActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.hauxin.zxing_demo.QRCodeScanCameraActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.transfer.ui.SDFileExplorerActivity"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity
+            android:name="com.example.transfer.ui.ReceiveFileActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.transfer.ui.zxing.MipcaActivityCapture"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.transfer.FirstActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service 
+            android:name="com.example.transfer.Service.SendFileService"/>
+        <service 
+            android:name="com.example.transfer.Service.ReceiveFileService"/>
+        <service 
+            android:name="com.example.transfer.Service.ReceiveFileFromNetworkService"/>
+    </application>
+
+</manifest>
